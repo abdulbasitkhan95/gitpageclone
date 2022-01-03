@@ -1,0 +1,105 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+/* -------Start Of Website Color Branding-------- */
+
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$borderColor: var(--borderColor);
+$darkGreyColor: var(--darkGreyColor);
+$lightGreyColor: var(--lightGreyColor);
+$whiteColor: var(--whiteColor);
+$blueColor: var(--blueColor);
+$lightblueColor: var(--lightblueColor);
+$orangeColor: var(--orangeColor);
+$btnGreyColor: var(--btnGreyColor);
+
+html:root {
+  --primary: #0d1117;
+  --secondary: #161b22;
+  --borderColor: #30363d;
+  --btnGreyColor: #21262d;
+  --darkGreyColor: #8b949e;
+  --lightGreyColor: #c9d1d9;
+  --whiteColor: #FFFFFF;
+  --blueColor: #1f6feb;
+  --lightblueColor: #58a6ff;
+  --orangeColor: #db6d28;
+}
+
+$font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+
+$font-family-base: $font-family-default;
+
+$h1-font-size: em(32);
+//$h2-font-size: em(50);
+$h3-font-size: em(20);
+//$h4-font-size: em(28);
+//$h5-font-size: em(24);
+//$h6-font-size: em(22);
+
+.color-primary {
+  color: #0d1117;
+}
+
+.color-secondary {
+  color: #161b22;
+}
+
+.borderColor {
+  color: #30363d;
+}
+
+.btnGreyColor {
+  color: #21262d;
+}
+
+.darkGreyColor {
+  color: #8b949e;
+}
+
+.lightGreyColor {
+  color: #c9d1d9;
+}
+
+.whiteColor {
+  color: #FFFFFF;
+}
+
+.blueColor {
+  color: #1f6feb;
+}
+
+.lightblueColor {
+  color: #58a6ff;
+}
+
+.orangeColor {
+  color: #db6d28;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767px) {
+}
