@@ -1,0 +1,370 @@
+@import "scss/em-to-px";
+@import "scss/mixin";
+@import "~bootstrap/scss/bootstrap";
+@import "scss/variables";
+
+body {
+  background: $primary;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.mainBann {
+  background: $secondary;
+  border-bottom: em(1) solid $borderColor;
+  padding: em(38) 0;
+  h1 {
+    font-size: $h1-font-size;
+    color: $lightGreyColor;
+  }
+  p {
+    color: $darkGreyColor;
+  }
+}
+
+.detail-sec {
+  padding: em(40) 0;
+}
+
+.box {
+  width: 100%;
+  max-width: em(980);
+  margin: auto;
+  border: em(1) solid $borderColor;
+  border-radius: em(5);
+}
+
+.box-header {
+  padding: em(15);
+  background: $secondary;
+  border-bottom: em(1) solid $borderColor;
+  display: flex;
+  justify-content: space-between;
+  .tab {
+    a {
+      font-size: em(14);
+      color: #FFF;
+      display: inline-block;
+      padding: em(8) em(19);
+      text-decoration: none;
+      font-weight: 500;
+      @include transition(0.4s);
+      border: 1px solid $borderColor;
+      &:active, &:hover, &.active {
+        background: $blueColor;
+        border: em(1) solid $blueColor;
+      }
+      &:first-child {
+        border-radius: em(6) 0 0 em(6);
+      }
+      &:last-child {
+        border-radius: 0 em(6) em(6) 0;
+      }
+    }
+  }
+}
+
+.single-repo {
+  padding: em(15) em(18);
+  border-bottom: em(1) solid $borderColor;
+  h3 {
+    margin: 0 0 em(2);
+    a {
+      color: $lightblueColor;
+      svg {
+        margin: 0 em(5) 0 0;
+      }
+      span {
+        font-size: em(11.5);
+      }
+    }
+  }
+  p {
+    color: $darkGreyColor;
+    margin: 0 0 em(5);
+    font-size: em(14);
+    max-width: em(660);
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.dropdown.btn-group {
+  float: right;
+  display: flex;
+  #dropdown-split-basic {
+    background: $btnGreyColor;
+    border: em(1) solid $borderColor;
+    padding: 0 em(11);
+  }
+}
+
+.getstars {
+  display: flex;
+  padding: em(3) em(15);
+  background: $btnGreyColor;
+  border-radius: em(4) 0 em(4) 0;
+  border: em(1) solid $borderColor;
+  text-decoration: none;
+  align-items: center;
+  span {
+    color: $darkGreyColor;
+    font-size: em(14);
+  }
+  svg {
+    margin: 0 em(3) 0 0;
+    height: em(13);
+    display: inline-block;
+  }
+}
+
+.repo-detail {
+  >* {
+    margin: 0 em(20) 0 0;
+    display: inline-block;
+  }
+  span {
+    color: $darkGreyColor;
+    font-size: em(12);
+  }
+  svg {
+    margin: 0 em(3) 0 0;
+    height: em(14);
+  }
+}
+
+.greyfill {
+  path {
+    fill: $darkGreyColor;
+  }
+}
+
+.total-stars {
+  margin: 0;
+  float: right;
+}
+
+.built {
+  a {
+    display: inline-block;
+    margin: 0 0 0 em(5);
+    img {
+      width: em(20);
+      height: em(20);
+      border-radius: 100%;
+    }
+  }
+}
+
+.box-detail {
+  counter-reset: singleDev;
+}
+
+.single-dev {
+  display: flex;
+  padding: em(20);
+  border-bottom: em(1) solid $btnGreyColor;
+  &:before {
+    counter-increment: singleDev;
+    content: counter(singleDev);
+    color: $darkGreyColor;
+    font-size: em(12);
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.dev-detail {
+  display: flex;
+  width: 100%;
+}
+
+.profile {
+  margin: 0 em(20) 0 em(20);
+  img {
+    width: em(48);
+    height: em(48);
+    border-radius: 100%;
+  }
+}
+
+.profile-detail {
+  h3 {
+    font-size: em(20);
+    margin: 0 0 0;
+    a {
+      color: $lightblueColor;
+    }
+  }
+  p {
+    font-size: em(16);
+    a {
+      color: $lightGreyColor;
+    }
+  }
+}
+
+.popular {
+  svg {
+    margin: 0 em(5) 0 0;
+    path {
+      fill: $orangeColor;
+    }
+  }
+  span {
+    color: $darkGreyColor;
+    font-size: em(12);
+  }
+}
+
+.repo-name {
+  h5 {
+    a {
+      font-size: em(13);
+      color: $blueColor;
+    }
+  }
+  svg {
+    margin: 0 em(5) 0 0;
+  }
+}
+
+.repo-small-detail {
+  p {
+    font-size: em(12);
+    color: $darkGreyColor;
+    margin: 0;
+  }
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+.css-b62m3t-container {
+  margin: 0 0 0 em(15);
+}
+
+.dropdown-menu {
+  background: $secondary;
+  border: em(1) solid $btnGreyColor;
+  padding: em(10) em(6);
+  width: em(200);
+}
+
+.dropdown-item {
+  color: $white;
+  background: transparent;
+  font-size: em(14);
+}
+
+.filter {
+  > div {
+    > div {
+      background: transparent;
+      border: 0;
+    }
+  }
+  .css-tlfecz-indicatorContainer, .css-1gtu0rj-indicatorContainer {
+    padding: 0;
+    svg {
+      width: em(15);
+      height: em(19);
+    }
+  }
+}
+
+.css-14el2xx-placeholder {
+  font-size: em(14);
+}
+
+.css-qc6sy-singleValue {
+  color: $blueColor !important;
+}
+
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+
+#react-select-3-listbox {
+  background: $secondary;
+  border: em(1) solid $borderColor;
+  * {
+    background: $secondary !important;
+    color: $lightGreyColor;
+  }
+  *:focus, *.active {
+    background: transparent;
+  }
+  *:hover {
+    background: $secondary !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .box-header {
+    display: block;
+  }
+
+  .filter {
+    width: 100%;
+  }
+
+  .css-b62m3t-container {
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .box-header {
+    display: block;
+  }
+
+  .tab {
+    margin: 0 0 em(10);
+  }
+
+  .filter {
+    width: 100%;
+    display: block;
+  }
+
+  .css-b62m3t-container {
+    margin: 0 0 0 0;
+    width: 100%;
+  }
+
+  .single-repo {
+    .getstars {
+      padding: 0 em(5);
+      span {
+        display: none;
+      }
+    }
+  }
+
+  button#dropdown-split-basic {
+    font-size: em(12);
+  }
+
+  .total-stars {
+    float: none;
+  }
+
+  .dev-detail {
+    display: block;
+  }
+
+  .profile {
+    img {
+      width: em(40);
+      height: em(40);
+    }
+  }
+}
